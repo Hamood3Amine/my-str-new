@@ -4,10 +4,12 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
+const devs = ['506034854043975681']; // ID
 client.on('message', msg => {
        var prefix = "$"
+       
     let args = message.content.split(" ").slice(1).join(" ");
+  if (!devs.includes(message.author.id)) return;
             if(msg.content.startsWith(prefix + "T24")){
                 client.user.setGame('#' + args ,`https://www.twitch.tv/lister`);
             message.channel.send(`! Done : :white_check_mark: `)
@@ -18,7 +20,7 @@ client.on('message', msg => {
 })
 
 const adminprefix = "s"; //Prefix
-const devs = ['506034854043975681']; // ID
+
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
