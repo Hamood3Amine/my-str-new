@@ -5,7 +5,17 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-
+client.on('message', msg => {
+       var prefix = "$"
+    let args = message.content.split(" ").slice(1).join(" ");
+            if(msg.content.startsWith(prefix + "T24")){
+                client.user.setGame('#' + args ,`https://www.twitch.tv/lister`);
+            message.channel.send(`! Done : :white_check_mark: `)
+            }
+            if(msg.content.startsWith(prefix + "G24")){
+                client.user.setGame('#' + args ,`https://www.youtube.com/`)
+            }
+})
 
 const adminprefix = "s"; //Prefix
 const devs = ['506034854043975681']; // ID
