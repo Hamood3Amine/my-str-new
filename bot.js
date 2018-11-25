@@ -4,26 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-client.on("ready", () => {
-console.log('By : m7md');
-client.user.setPresence({
-  status: 'dnd',
-  game: { 
-     type: 0,
-     name: 'Lister',
-     details: `Super_Man`,
-     url: 'http://twitch.tv/M7md_Salih',
-     state: `LeHero`,
-    application_id: '282859044593598464',
-     assets: {
-        small_image: `516316439976607745`,
-        small_text: '# Dalida',
-        large_image: `516316337421942824`,
-        large_text: `Lister` }
 
-  }
-    });
-});
 
 const adminprefix = "s"; //Prefix
 const devs = ['506034854043975681'];
