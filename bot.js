@@ -26,13 +26,13 @@ client.user.setPresence({
 });
 
 const adminprefix = "s"; //Prefix
-
+const devs = ['506034854043975681'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
     
 if (message.content.startsWith(adminprefix + 'G')) {
-  client.user.setGame(argresult);
+  client.user.setGame(argresult ,"");
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else 
   if (message.content.startsWith(adminprefix + 'N')) {
