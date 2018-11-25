@@ -32,7 +32,7 @@ client.on('message', message => {
     if (!devs.includes(message.author.id)) return;
     
 if (message.content.startsWith(adminprefix + 'G')) {
-  client.user.setGame(argresult ,"");
+  client.user.setGame(argresult ,"https://discordapp.com/");
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else 
   if (message.content.startsWith(adminprefix + 'N')) {
