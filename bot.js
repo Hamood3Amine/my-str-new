@@ -13,12 +13,12 @@ client.user.setPresence({
      name: 'Lister',
      details: `Super_Man`,
      url: 'http://twitch.tv/M7md_Salih',
-     state: `هاي يوتيوب`,
+     state: `LeHero`,
     application_id: '282859044593598464',
      assets: {
-        small_image: `516316439976607753`,
-        small_text: 'هاي يوتيوب',
-        large_image: `516316337421942826`,
+        small_image: `516316439976607745`,
+        small_text: '# Dalida',
+        large_image: `516316337421942824`,
         large_text: `Lister` }
 
   }
