@@ -8,14 +8,15 @@ const devs = ['506034854043975681']; // ID
 client.on('message', msg => {
        var prefix = "$"
        
-    let args = message.content.split(" ").slice(1).join(" ");
-  if (!devs.includes(message.author.id)) return;
+    let args = msg.content.split(" ").slice(1).join(" ");
+  if (!devs.includes(msg.author.id)) return;
             if(msg.content.startsWith(prefix + "T24")){
                 client.user.setGame('#' + args ,`https://www.twitch.tv/lister`);
-            message.channel.send(`! Done : :white_check_mark: `)
+            msg.channel.send(`! Done : :white_check_mark: `)
             }
             if(msg.content.startsWith(prefix + "G24")){
                 client.user.setGame('#' + args ,`https://www.youtube.com/`)
+            msg.channel.send(`! Done : :white_check_mark: `)
             }
 })
 
