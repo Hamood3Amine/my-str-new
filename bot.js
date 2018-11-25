@@ -4,21 +4,26 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-const devs = ['506034854043975681']; // ID
-client.on('message', msg => {
-       var prefix = "$"
-       
-    let args = msg.content.split(" ").slice(1).join(" ");
-  if (!devs.includes(msg.author.id)) return;
-            if(msg.content.startsWith(prefix + "T24")){
-                client.user.setGame('#' + args ,`https://www.twitch.tv/lister`);
-            msg.channel.send(`! Done : :white_check_mark: `)
-            }
-            if(msg.content.startsWith(prefix + "G24")){
-                client.user.setGame('#' + args ,`https://www.youtube.com/`)
-            msg.channel.send(`! Done : :white_check_mark: `)
-            }
-})
+client.on("ready", () => {
+console.log('By : m7md');
+client.user.setPresence({
+  status: 'dnd',
+  game: { 
+     type: 0,
+     name: 'Lister',
+     details: `Super_Man`,
+     url: 'http://twitch.tv/M7md_Salih',
+     state: `هاي يوتيوب`,
+    application_id: '282859044593598464',
+     assets: {
+        small_image: `516316439976607753`,
+        small_text: 'هاي يوتيوب',
+        large_image: `516316337421942826`,
+        large_text: `Lister` }
+
+  }
+    });
+});
 
 const adminprefix = "s"; //Prefix
 
